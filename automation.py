@@ -86,6 +86,10 @@ def post_whatsapp_status(driver, photo_path, caption):
         print("Status posted successfully!")
         time.sleep(5)
 
+        # Wait for the status to be posted
+        print("Waiting for WhatsApp to process and post the status.")
+        time.sleep(15)  # Increased wait time to ensure status gets posted
+
     except Exception as e:
         print(f"An error occurred while posting the status: {e}")
     finally:
